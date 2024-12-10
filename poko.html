@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokémon Card Generator</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="pokeman.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card" id="card">
+        <div class="card-face front">
+          <p class="hp"><span>HP</span> 100</p>
+          <img src="demo-image.svg" alt="Pokémon Image" />
+          <h2 class="poke-name">Pikachu</h2>
+          <div class="types">
+            <span style="background-color: #fed330;">Electric</span>
+          </div>
+          <div class="details">Weight: 6.0kg | Abilities: Static</div>
+          <div class="stats">
+            <div>
+              <h3>50</h3>
+              <p>Attack</p>
+            </div>
+            <div>
+              <h3>40</h3>
+              <p>Defense</p>
+            </div>
+            <div>
+              <h3>90</h3>
+              <p>Speed</p>
+            </div>
+          </div>
+        </div>
+        <div class="card-face back">
+          <p>Loading Pokémon...</p>
+        </div>
+      </div>
+      <button id="btn">Generate Pokémon</button>
+    </div>
+
+    <script src="script.js">
+    </script>
+  </body>
+</html>

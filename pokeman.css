@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #eff3ff;
+  transition: background-color 0.8s ease;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-face.front {
+  background-color: white;
+  text-align: center;
+  transition: border 0.3s ease-in-out;
+}
+
+.card-face.back {
+  background: linear-gradient(135deg, #6c5ce7, #0984e3);
+  color: white;
+  transform: rotateY(180deg);
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.hp {
+  background-color: #ffffff;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 15px 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.poke-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+.types {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
+  gap: 10px;
+}
+
+.types span {
+  padding: 5px 15px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.details {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.stats p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+#btn {
+  margin-top: 20px;
+  padding: 12px 40px;
+  font-size: 1rem;
+  background-color: #101010;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+#btn:hover {
+  transform: translateY(-5px);
+  background-color: #333;
+}
